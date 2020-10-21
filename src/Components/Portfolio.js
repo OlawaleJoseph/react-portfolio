@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 
 class Portfolio extends Component {
   render() {
+    let projects;
 
     if(this.props.data){
-      var projects = this.props.data.projects.map(function(projects){
-        var projectImage = 'images/portfolio/'+projects.image;
+      projects = this.props.data.projects.map(function(projects){
+        const projectImage = 'images/portfolio/'+projects.image;
         return <div key={projects.title} className="columns portfolio-item">
            <div className="item-wrap">
-            <a href={projects.url} title={projects.title}>
                <img alt={projects.title} src={projectImage} />
                <div className="overlay">
                   <div className="portfolio-item-meta">
@@ -16,8 +16,14 @@ class Portfolio extends Component {
                      <p>{projects.category}</p>
                   </div>
                 </div>
-              <div className="link-icon"><i className="fa fa-link"></i></div>
-            </a>
+              <div className="link-icon">
+                <a href={projects.url} title={projects.title}>
+                  <i className="fa fa-link"></i>
+                </a>
+                <a href={projects.repo} title={projects.title}>
+                  <i class="fab fa-github"></i>
+                </a>
+                </div>
           </div>
         </div>
       })

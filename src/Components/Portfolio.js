@@ -21,7 +21,7 @@ class Portfolio extends Component {
                   <i className="fa fa-link"></i>
                 </a>
                 <a href={projects.repo} title={projects.title}>
-                  <i class="fab fa-github"></i>
+                  <i className="fab fa-github"></i>
                 </a>
                 </div>
           </div>

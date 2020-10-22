@@ -40,6 +40,30 @@ header {
    overflow: hidden;
 }
 
+.d-none {
+   display: none !important;
+}
+
+.success {
+   background-color: #064e33;
+}
+
+.error {
+   background-color: tomato;
+}
+
+.success,
+.error {
+   display: block !important;
+   padding: 20px;
+   color: white;
+   font-size: 14px;
+   position: absolute;
+   z-index: 999;
+   width: 100%;
+}
+
+
 /* vertically center banner section */
 header:before {
    content: '';

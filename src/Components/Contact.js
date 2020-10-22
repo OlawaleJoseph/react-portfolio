@@ -1,19 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment, useEffect } from 'react';
+import emailjs from 'emailjs-com';
+import Toast from './Toast';
 
 const Contact = ({ data }) => {
    const [name, setName] = useState('');
    const [subject, setSubject] = useState('');
    const [email, setEmail] = useState('');
    const [message, setMessage] = useState('');
+   const [success, setSuccess] = useState(true);
+   const [error, setError] = useState(true);
+   const [toastText, setToastText] = useState('');
 
-    const handleClick = (e) => {
-       e.preventDefault();
-      window.open(`mailto:${email}?subject=${subject}&body=${name}: ${message}`);
+   useEffect(() => {
+      setSuccess(false);
+      setError(false)
+   }, [success])
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      emailjs.sendForm('gmail', process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID, e.target, process.env.REACT_APP_EMAIL_JS_USER_ID)
+      .then(result => {
+         console.log('Success')
+         setToastText('Thanks for reaching out.');
+         setSuccess(true);
+         setError(false)
+      },
+      error => {
+         console.log('Failed')
+         setToastText(error.message);
+         setSuccess(false)
+         setError(true)
+      })
+      e.target.reset();
     }
     
 
     return (
-      <section id="contact">
+      <Fragment>
+         <Toast success={success} error={error} text={toastText} />
+         <section id="contact">
 
          <div className="row section-head">
 
@@ -34,7 +59,7 @@ const Contact = ({ data }) => {
          <div className="row">
             <div className="eight columns">
 
-               <form id="contactForm" name="contactForm">
+               <form id="contactForm" onSubmit={handleSubmit} name="contactForm">
 					<fieldset>
 
                   <div>
@@ -58,7 +83,7 @@ const Contact = ({ data }) => {
                   </div>
 
                   <div>
-                     <button type='submit' onClick={handleClick} className="submit">Submit</button>
+                     <button type='submit' className="submit">Submit</button>
                      <span id="image-loader">
                         <img alt="" src="images/loader.gif" />
                      </span>
@@ -91,6 +116,7 @@ const Contact = ({ data }) => {
             </aside>
       </div>
    </section>
+      </Fragment>
     );
 }
 

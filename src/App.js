@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import dotenv from 'dotenv';
 import $ from 'jquery';
 import './App.css';
 import Header from './Components/Header';
@@ -7,6 +8,8 @@ import About from './Components/About';
 import Resume from './Components/Resume';
 import Contact from './Components/Contact';
 import Portfolio from './Components/Portfolio';
+
+dotenv.config({ path: '../.env' });
 
 class App extends Component {
 

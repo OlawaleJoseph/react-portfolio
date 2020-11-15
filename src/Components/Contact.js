@@ -85,7 +85,7 @@ const Contact = ({ data }) => {
                   <div>
                      <button type='submit' className="submit">Submit</button>
                      <span id="image-loader">
-                        <img alt="" src="images/loader.gif" />
+                        <img alt="loader" src="images/loader.gif" />
                      </span>
                   </div>
 					</fieldset>

@@ -1,8 +1,7 @@
 {
   "main": {
     "name": "Adedeko Olawale",
-    "occupation": "FULL STACK SOFTWARE DEVELOPER.",
-    "description": "A Full stack software Developement student at Microverse",
+    "occupation": "Full-Stack software developer",
     "bio": "Hi, you can call me Wale, I'm a Full Stack Software Developer. I am skilled in Javascript, Ruby, React, Redux, NodeJs, Ruby on Rails with a solid understanding of GIT, Gitflow, TDD.",
     "contactmessage": "If you want to get in touch with me kindly drop a message here",
     "email": "adedekojoseph@gmail.com",
@@ -48,7 +47,7 @@
         "company": "Andela",
         "title": "Intern",
         "years": "August 2019 - Nov-2019",
-        "description": "Deisgned and built Reasful APIs for clients"
+        "description": "Designed and built Reasful APIs for clients"
       },
       {
         "company": "Microverse",
@@ -83,7 +82,7 @@
         "level": "70%"
       },
       {
-        "name": "Ruby  on Rails",
+        "name": "Ruby on Rails",
         "level": "65%"
       },
       {
@@ -95,7 +94,7 @@
         "level": "80%"
       },
       {
-        "name": "Postgres",
+        "name": "Postgresql",
         "level": "80%"
       }
     ]
@@ -104,14 +103,14 @@
     "projects": [
       {
         "title": "COVID-19 TRACKER",
-        "category": "A web app that gives information on the COVID-19 pandemic across countries(ReactJS, Firebase,Chartjs,Material UI, Disease.sh API)",
+        "category": "A web app that gives information on the COVID-19 pandemic across countries(ReactJS, Firebase, Chartjs, Material UI, Disease.sh API)",
         "image": "covid-tracker.png",
         "repo": "https://github.com/OlawaleJoseph/covid-info",
         "url": "https://covid-update-2020.web.app/"
       },
       {
         "title": "A FINANCE TRACKER APPLICATION",
-        "category": "An app to help track fincial obligations (Ruby, Rails, Devise, Bootstrap)",
+        "category": "An app to help track financial obligations (Ruby, Rails, Devise, Bootstrap)",
         "image": "team-save.png",
         "url": "https://limitless-coast-23786.herokuapp.com/",
         "repo": "https://github.com/OlawaleJoseph/team-save"
@@ -125,7 +124,7 @@
       },
       {
         "title": "NEWSWEEK CLONE",
-        "category": "A clone of the newsweek homepage(HTML, BOOTSTRAP)",
+        "category": "A clone of the Newsweek homepage(HTML, BOOTSTRAP)",
         "image": "newsweek.png",
         "url": "https://rawcdn.githack.com/OlawaleJoseph/newsweek-clone/abd9432712098996448b46549f209bef82c22017/index.html",
         "repo": "https://github.com/OlawaleJoseph/newsweek-clone"
